@@ -46,3 +46,13 @@ select {
 }
 
 /* CSS reset */
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  /* flex-direction: column; megforditjuk a default flex primary es secondary tengelyeket */
+  /* width: 100vh; ezt altalaban folosleges megadni a scroll bar miatt*/
+  justify-content: center; /* a primary tengelyre hat */
+  align-items: center; /* secondary axis rendezes */
+}
