@@ -3,29 +3,31 @@ const generateArray = function (amount) {
   amount = parseInt(amount);
 
   if (!Number.isNaN(amount)) {
-    for (let i = 0; i < amount; i++) {
-      returnArray.push(`${i}`); // szovegge alakitok egy szamot
+    for (let i = 1; i <= amount; i++) {
+      const newI = i.toString();
+      const newA = amount.toString();
+      const zero = "0";
+      const numOfZero = newA.length - newI.length;
+      returnArray.push(`${zero.repeat(numOfZero)}${newI}`);
     }
   } else {
     returnArray.push("error");
+    console.error("You gave me NaN!");
   }
   return returnArray;
 };
 
 const loadEvent = function () {
   console.log("The site is ready.");
-  /*
-  console.log(generateArray(10));
-  console.log(generateArray(20));
-  console.log(generateArray("nemnem"));
-  console.log(generateArray([5]));
-  */
+
   const root = document.getElementById("root");
-  const list = generateArray(4);
+  const list = generateArray(200);
   if (list[0] !== "error") {
     for (const item of list) {
       root.insertAdjacentHTML("beforeend", `<div>${item}</div>`);
     }
+  } else {
+    console.error("You gave me NaN!");
   }
 };
 
