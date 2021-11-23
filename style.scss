@@ -57,17 +57,20 @@ select {
   align-items: center; /* secondary axis rendezes */
 }
 
-/* card formazas blablabla... */
 #cards {
-  display: flex;
+  display: grid;
+  /* card formazas valami blablabla... */
 
   @media screen and (min-width: 1000px) {
     margin: 0 100px;
+    grid-template-columns: auto auto auto auto;
   }
   @media screen and (min-width: 700px) and (max-width: 999px) {
     margin: 0 50px;
+    grid-template-columns: auto auto auto;
   }
   @media screen and (max-width: 699px) {
     margin: 0 10px;
+    grid-template-columns: repeat(2, auto);
   }
 }

@@ -68,28 +68,33 @@ select {
   /* secondary axis rendezes */
 }
 
-/* card formazas blablabla... */
 #cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  /* card formazas valami blablabla... */
 }
 
 @media screen and (min-width: 1000px) {
   #cards {
     margin: 0 100px;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 999px) {
   #cards {
     margin: 0 50px;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
   }
 }
 
 @media screen and (max-width: 699px) {
   #cards {
     margin: 0 10px;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
   }
 }
 /*# sourceMappingURL=style.css.map */
