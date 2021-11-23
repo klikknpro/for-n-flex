@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a,
+img {
+  border: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+input,
+textarea,
+select {
+  appearance: none !important;
+  -webkit-appearance: none !important; /* safari, opera, chrome miatt */
+  border-radius: 0;
+}
+
+/* CSS reset */
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  /* flex-direction: column; megforditjuk a default flex primary es secondary tengelyeket */
+  /* width: 100vh; ezt altalaban folosleges megadni a scroll bar miatt*/
+  justify-content: center; /* a primary tengelyre hat */
+  align-items: center; /* secondary axis rendezes */
+}
+
+/* card formazas blablabla... */
+#cards {
+  display: flex;
+
+  @media screen and (min-width: 1000px) {
+    margin: 0 100px;
+  }
+  @media screen and (min-width: 700px) and (max-width: 999px) {
+    margin: 0 50px;
+  }
+  @media screen and (max-width: 699px) {
+    margin: 0 10px;
+  }
+}
