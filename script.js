@@ -16,6 +16,7 @@ const generateArray = function (amount) {
   }
   return returnArray;
 };
+// String.prototype.padStart() is f@sza lehet
 
 const loadEvent = function () {
   console.log("The site is ready.");
